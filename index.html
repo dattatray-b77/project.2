@@ -1,75 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Forex Trader Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <title>Simple Calculator</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="calculator">
+    <input type="text" id="display" readonly>
+    <div class="buttons">
+      <button onclick="clearDisplay()">C</button>
+      <button onclick="appendValue('/')">/</button>
+      <button onclick="appendValue('')"></button>
+      <button onclick="deleteLast()">←</button>
 
-  <header>
-    <h1>Dattatray Bejgamwar</h1>
-    <p>Forex Trader | Technical Analyst | Risk Manager</p>
-    <nav>
-      <a href="#performance">Performance</a>
-      <a href="#strategies">Strategies</a>
-      <a href="#journal">Trade Journal</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+      <button onclick="appendValue('7')">7</button>
+      <button onclick="appendValue('8')">8</button>
+      <button onclick="appendValue('9')">9</button>
+      <button onclick="appendValue('-')">-</button>
 
-  <section class="intro">
-    <h2>Welcome</h2>
-    <p>I specialize in forex market analysis, risk-managed trading strategies, and consistent performance tracking. Explore my trades, strategies, and approach.</p>
-  </section>
+      <button onclick="appendValue('4')">4</button>
+      <button onclick="appendValue('5')">5</button>
+      <button onclick="appendValue('6')">6</button>
+      <button onclick="appendValue('+')">+</button>
 
-  <section id="performance">
-    <h2>Performance</h2>
-    <p>Here’s a snapshot of my trading performance over the past months.</p>
-    <ul>
-      <li>✅ Average Monthly Return: +8.3%</li>
-      <li>✅ Win Rate: 63%</li>
-      <li>✅ Risk/Reward: 1:2</li>
-      <li>📈 Equity Curve: <a href="#">View Chart</a></li>
-    </ul>
-  </section>
+      <button onclick="appendValue('1')">1</button>
+      <button onclick="appendValue('2')">2</button>
+      <button onclick="appendValue('3')">3</button>
+      <button onclick="calculateResult()">=</button>
 
-  <section id="strategies">
-    <h2>Trading Strategies</h2>
-    <p>These are the main strategies I use:</p>
-    <ul>
-      <li><strong>EMA Crossover Strategy</strong> – Based on 50/200 EMA trend confirmation.</li>
-      <li><strong>Breakout Trading</strong> – Supports key resistance zone breakout with volume.</li>
-      <li><strong>RSI Divergence</strong> – Spotting reversals using RSI signals.</li>
-    </ul>
-  </section>
-
-  <section id="journal">
-    <h2>Trade Journal</h2>
-    <p>A few documented trades with entry reasoning and outcome:</p>
-    <div class="journal-entry">
-      <h3>EUR/USD – Breakout Trade</h3>
-      <p><strong>Entry:</strong> 1.0785 | <strong>SL:</strong> 1.0750 | <strong>TP:</strong> 1.0850</p>
-      <p><strong>Result:</strong> Hit TP 🎯</p>
+      <button onclick="appendValue('0')" class="zero">0</button>
+      <button onclick="appendValue('.')">.</button>
     </div>
-    <div class="journal-entry">
-      <h3>GBP/JPY – Reversal Setup</h3>
-      <p><strong>Entry:</strong> 186.40 | <strong>SL:</strong> 186.90 | <strong>TP:</strong> 185.20</p>
-      <p><strong>Result:</strong> Hit SL ❌</p>
-    </div>
-  </section>
+  </div>
 
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <p>Email: <a href="mailto:your@email.com">dattatraybejgamwar77@gmail.com</a></p>
-    <p>LinkedIn: <a href="#">www.linkedin.com/in/dattatray-bejgamwar-001117365</a></p>
-    
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Dattatray Bejgamwar | Forex Portfolio</p>
-  </footer>
-
+  <script src="script.js"></script>
 </body>
 </html>
